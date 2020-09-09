@@ -1,0 +1,15 @@
+body {
+  background-color: forestgreen;
+  margin: 0;
+}
+
+#root {
+  font-size: 2em;
+  background-color: gray;
+  width: 960px;
+  min-height: 100vp;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 0 0 20px gray;
+  box-sizing: border-box;
+}
