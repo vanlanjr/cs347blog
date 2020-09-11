@@ -4,13 +4,15 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 #mono {
-  font-size: 2em;
+  direction: column;
+  font-size: 1em;
   background-color: white;
   width: 960px;
-  min-height: 100vh;
+  height: 100vh;
   margin: 0 auto;
   padding: 0;
   box-shadow: 0 0 20px black;
@@ -41,9 +43,13 @@ body {
   background-color: rgb(80,80,80);
 }
 
+main > h1 {
+  font-size: 1em;
+}
+
 footer {
   display: flex;
   justify-content: center;
-  text-align: flex-end;
   bottom: 0;
+  position: static;
 }
