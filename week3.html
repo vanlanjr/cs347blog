@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <div class="cursor"></div>
   <div id="mono">
     <div id="root">
       <header>
@@ -43,7 +44,33 @@
           I look forward to experimenting with in project 1.  At the end of this week, we were also introduced to more javascript,
           and I look forward to learning more about it in the near future.
         </p><p>
-          Outside of class, 
+          Outside of class, I experimented with changing the page's cursor.  I added a nyan cat as the background image.  I like to 
+          think of it as an evil nyan cat because it sometimes won't let me click on other links so it just traps me on this page
+          where it lives.  The video that I watched on Youtube that helped me with this can be found here: <a href="https://www.youtube.com/watch?v=rfpRZ2t_BrQ&t=411s" target="_blank"> 
+          Creating Custom Cursors - CSS Only, and Javascript!</a>
+        </p><p>
+          Here is the code for evil nyan cat:
+        </p><p>
+          <code>
+            <blockquote>
+              .cursor { <br>
+                width: 40px;<br>
+                height: 40px;<br>
+                position: absolute;<br>
+                background-image: url('bigger_cat.gif');<br>
+                transition-duration: 200ms;<br>
+                transition-timing-function: ease-out;<br>
+              }<br>
+              <br>
+              const cursor = document.querySelector('.cursor');<br>
+              document.addEventListener('mousemove', e => {<br>
+                cursor.setAttribute("style", "top: " +(e.pageY - 20)+"px; left: "+(e.pageX - 20)+"px;")<br>
+              });<br>
+              document.addEventListener('mouseover', e => {<br>
+                cursor.setAttribute("style", "background-image: none;")<br>
+              });<br>
+            </blockquote>
+          </code>
         </p>
       </main>
     </div>
@@ -51,6 +78,16 @@
         Website Customized, Crafted, and Coded by Jason Vanlandingham
     </footer>
   </div>
+
+  <script>
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.setAttribute("style", "top: " +(e.pageY - 20)+"px; left: "+(e.pageX - 20)+"px;")
+    });
+    document.addEventListener('mouseover', e => {
+      cursor.setAttribute("style", "background-image: none;")
+    });
+  </script>
 </body>
 
 </html>
