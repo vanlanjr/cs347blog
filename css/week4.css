@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  margin: 0;
+}
+
+section {
+  height: 100vh;
+}
+
+#my-section {
+  padding: 10em;
+}

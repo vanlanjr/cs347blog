@@ -63,7 +63,7 @@ footer {
   width: 40px;
   height: 40px;
   position: absolute;
-  background-image: url('bigger_cat.gif');
+  background-image: url('../images/bigger_cat.gif');
   transition-duration: 400ms;
   transition-timing-function: ease-out;
 }

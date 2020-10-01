@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Week 4</title>
+  <link rel="stylesheet" href="css/locomotive-scroll.css">
+  <link rel="stylesheet" href="css/week4.css">
+  <link rel="stylesheet" href="css/monocolumn.css">
+</head>
+
+<body>
+  <div id="mono">
+    <div id="root">
+      <header>
+        <h2>
+          Jason Vanlandingham
+        </h2>
+        <h3>
+          Web Development Journey
+        </h3>
+      </header>
+      <nav>
+        <ul class="navlinks">
+          <li class="navlink"><a href="index.html">Home</a></li>
+          <li class="navlink"><a href="blog.html">Weekly Blogs</a></li>
+        </ul>
+      </nav>
+      <main>
+
+        <div data-scroll-container>
+          <section data-scroll-section>
+            <h1>
+              Week 4 Blog
+            </h1>
+            <p>
+              Posted on October 1, 2020
+            </p><p>
+              This week in web development, I learned about how to have a responsive web design using 
+              media queries. This taught me to create website that has a good viewport for both desktop
+              and mobile screens. Once I learned how to do this, I implemented it in my project 1 assignment
+              webpage.  For the lab on this day, my group and I experimented with using media queries to 
+              keep the display looking elegant while the browser is resized.  This lab was pretty difficult and 
+              my group wasn't able to finish it in class. 
+            </p><p>
+              The next lecture was about using the grid layout for manipulating forms.  These forms can be designed
+              on the webpage or they can be taken in as input from the website's user.  Additionally, I learned
+              how to create a list of automatic suggestions for text inputs.  This is more advanced and looks nicer
+              than just providing a plain input text box.  The last topic that was covered was creating labels that
+              stay in the field of input. Using various CSS techniques, these labels can be subject to outline on click
+              and have a defined background from the body.
+            </p><p>
+              Outside of class, I did some research on the Locomotive Scrolling bar provided on GitHub.  In order to do this,
+              I watched a video called <a href="https://www.youtube.com/watch?v=zrM6N-G6U_M" target="_blank">Locomotive Scroll
+              Is Awesome - Here's How to Use it</a>. To apply locomotive scroll to my webpage, I had to download the package using
+              npm from Node.js.  My implementation includes javascript as well as new html tags.
+            </p><p> 
+              Here is the code the scrolling bar:
+            </p><p>
+              <code>
+                <blockquote>
+                  JavaScript:<br>
+                    import LocomotiveScroll from 'locomotive-scroll';<br>
+                    <br>
+                    const scroll = new LocomotiveScroll({<br>
+                        el: document.querySelector('[data-scroll-container]'),<br>
+                        smooth: true<br>
+                    });<br>
+                  <br>
+                  CSS:<br>
+                    * {<br>
+                      box-sizing: border-box;<br>
+                    }<br>
+                    main {<br>
+                      height: 100vh;<br>
+                      margin: 0;<br>
+                    }<br>
+                    section {<br>
+                      height: 100vh;<br>
+                    }<br>
+                </blockquote>
+              </code>
+            </p>
+          </section>
+          <section class="section2" id="my-section" data-scroll-section>
+            <h2 data-scroll data-scroll-speed="1">This is the Locomotive Scroll Page!</h2>
+          </section>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="js/scroll.js"></script>
+</body>
+
+</html>
