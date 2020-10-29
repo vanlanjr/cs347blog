@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Week 7</title>
+  <link rel="stylesheet" href="css/monocolumn.css">
+</head>
+
+<body>
+  <div id="mono">
+    <div id="root">
+      <header>
+        <h2>
+          Jason Vanlandingham
+        </h2>
+        <h3>
+          Web Development Journey
+        </h3>
+      </header>
+      <nav>
+        <ul class="navlinks">
+          <li class="navlink"><a href="index.html">Home</a></li>
+          <li class="navlink"><a href="blog.html">Weekly Blogs</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h1>
+          Week 7 Blog
+        </h1>
+        <p>
+          Posted on October 29, 2020
+        </p><p>
+          This week in web development, we switched gears from learning about basic html and javascript
+          development, to working with React and Express Web Services.  React allows us creat dynamic
+          applications on the web. It acts as a bridge for concurrency to update the model.  It is quite
+          different from what we've been doing before, with less html files, added components, and we have
+          a lot less control over the webpage.  There are some similarities though, with CSS files, HTML syntax,
+          and event handling in Javascript. In addition to React, we learned about Express. Express allows us
+          to communicate with web services via calls to the REST web service.  This framework is going to prove
+          to be very useful when development for project 2 starts.
+        </p><p>
+          Outside of class, I decided to do more research on React since it is so prominant in the web 
+          development industry today. At the end of the Fall semester last year when I was applying for 
+          a lot of summer internship, almost all of the job descriptions included something about React
+          and how prior knowledge of the tool will be very useful.  It was even something that a lot 
+          of companies were looking for when they were hiring.
+        </p><p>
+          Since I am a beginner with React, I decided to focus my extra research on something that
+          would help me grasp a basic understanding of it so that I can focus on more of the advanced topics
+          later on in the semester. The article I found is called <a href="https://camjackson.net/post/9-things-every-reactjs-beginner-should-know" 
+          target="_blank">9 Things That Every React.js Beginner Should Know</a>.  Some of the things I learned
+          is that React components should stay small so that they are easier to test and understand. Additionally,
+          each component should have a percise function.  In React, there are multiple differnt ways to define
+          a component, one being
+          <pre>
+            const MyComponent = React.createClass({
+              render: function() {
+                return div className={this.props.className}/>;
+              }
+            });
+          </pre>
+          or 
+          <pre>
+            class MyComponent extends React.Component {
+              render() {
+                return div className={this.props.className}/>;
+              }
+            }
+          </pre>
+          but there is an even better syntax that helps make the code look more consise and well defined.
+          This looks like:
+          <pre>
+            const MyComponent = props => (
+              div className={props.className}/>
+            );
+         </pre>
+          In the article, I also learned is to always use propTypes. This is because propTypes add a lot 
+          of safety to components by it can allow the developer to catch bugs early by throwing errors
+          on silly mistakes. They also add extra documentation to the code which saves other readers from 
+          having to search through code looking for the different propTypes.
+        </p>
+        <p>
+          Finally, it is recommended to use JSX, ES6, Babel, Webpack, and NPM. In class, I've already had
+          exposure to JSX and NPM. Both have proven to be very useful when working on the labs. JSX is very 
+          helpful for creating React elements and NPM is great for package management.
+        </p>
+      </main>
+    </div>
+    <footer>
+        Website Customized, Crafted, and Coded by Jason Vanlandingham
+    </footer>
+  </div>
+</body>
+
+</html>
