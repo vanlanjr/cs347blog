@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Week 8</title>
+  <link rel="stylesheet" href="css/monocolumn.css">
+</head>
+
+<body>
+  <div id="mono">
+    <div id="root">
+      <header>
+        <h2>
+          Jason Vanlandingham
+        </h2>
+        <h3>
+          Web Development Journey
+        </h3>
+      </header>
+      <nav>
+        <ul class="navlinks">
+          <li class="navlink"><a href="index.html">Home</a></li>
+          <li class="navlink"><a href="blog.html">Weekly Blogs</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h1>
+          Week 8 Blog
+        </h1>
+        <p>
+          Posted on November 3rd, 2020
+        </p><p>
+          This week in web development, we learned how to connect a mysql database to a webservice. It was pretty
+          hard to follow along since I had no idea what he was doing in why, but I'm sure that it will make more
+          sense when I have to follow his directions for starting the mysql database for project 2 and connecting
+          it to a web service that my partner and I will develop. One thing that did make sense was the sql
+          scripts used to create the database and all the tables for it. This is because I am also taking Databases
+          right now so those functions looked very familiar. It was interesting watching the videos because I do
+          all my sql development on MySQL Workbench rather than a cmd line text editor so that was neat. Later in 
+          the week, we learned about Redux and how it can be used to manage an object's state and all the data that
+          is involved.
+        </p><p>
+           Outside of class, I decided to do more research on JSX and how it is different from JavaScript.  JSX is used
+           in React apps as a way to create React elements. The article I read is called <a href="https://reactjs.org/docs/jsx-in-depth.html#why-jsx" 
+          target="_blank">JSX In Depth</a>. I learned a hand full of new information and best practices when it comes to
+          using JSX in React apps to crete elements.
+        </p><p>
+          Here are a few of those things:
+          <ul>
+            <li>
+              The first type of the JSX tag specifies the type of the React element.
+              <pre>
+                React.createElement(
+                  MyButton,
+                  {color: 'blue', shadowSize: 2},
+                  'Click Me'
+                )
+              </pre>
+              is a MyButton React component because of the capitalized first letter, and
+              <pre>
+                React.createElement(
+                  'div',
+                  {className: 'sidebar'}
+                )
+              </pre>
+              is a div.
+            </li><li>
+              Components created by the user should be capitalized and they should also be capitalized when they
+              are referenced in code.
+            </li><li>
+              JavaScript expressions can be passed as props if they are enclosed in {}.
+            </li><li>
+              You can use ...props as a "spread" operator in a prop that will pass the whole props object. The function:
+              <pre>
+                function App() {
+                  const props = {firstName: 'Ben', lastName: 'Hector'};
+                  return <Greeting {...props} />;
+                }
+              </pre>
+              will return the whole props object.
+            </li><li>
+              You can access a component's children by calling props.children. The children can be a string literal,
+              other components, arrays, or JavaScript expressions. 
+            </li><li>
+              Booleans, null, and undefined are ignored in React. If you want to use these values to appear in output,
+              then you need to convert them to a string first. This would look like:
+              <pre>
+                div>
+                  My JavaScript variable is {String(myVariable)}.
+                /div>
+              </pre>
+            </li>
+          </ul>
+        </p>
+      </main>
+    </div>
+    <footer>
+        Website Customized, Crafted, and Coded by Jason Vanlandingham
+    </footer>
+  </div>
+</body>
+
+</html>
