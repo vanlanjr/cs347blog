@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Week 9</title>
+  <link rel="stylesheet" href="css/monocolumn.css">
+</head>
+
+<body>
+  <div id="mono">
+    <div id="root">
+      <header>
+        <h2>
+          Jason Vanlandingham
+        </h2>
+        <h3>
+          Web Development Journey
+        </h3>
+      </header>
+      <nav>
+        <ul class="navlinks">
+          <li class="navlink"><a href="index.html">Home</a></li>
+          <li class="navlink"><a href="blog.html">Weekly Blogs</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h1>
+          Week 9 Blog
+        </h1>
+        <p>
+          Posted on November 12th, 2020
+        </p><p>
+          This week in Web Development, we were introduced to the second half of Redux. Last week
+          we learned the basics for Redux which included how it supports React, the structure of it, 
+          and how to import it into the React app. This week, we extended the previous app by adding
+          new memories, creating a UI that allows for editing the memories once they are added,
+          implementing the actions needed to update the database, and creating the functionality for
+          deleting the memories.
+        </p><p>
+           Because I was really confused about Redux and how to best use it in the React application, 
+           I decided that my outside-of-class research this week is going to be for Redux applications.
+           More specifically, I didn't quite understand state, actions, and reducers so that is what I
+           focused on. The article I read is called <a href="https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers" 
+          target="_blank">Redux Fundamentals, Part 3: State, Actions, and Reducers</a> from the Redux 
+          documentation online.
+        </p><p>
+          Some of the things I learned from the article are:
+          <ul>
+            <li>
+              When creating a React app that includes Redux applcationns, the first step is to define
+              the requirements.  After that, design the different states by coming up with their values,
+              stucture, and actions that affect them.  Once that is done, designs the actions. Finally,
+              you write the Reducer by creating the root and adding the updates that the reducer handles.
+              Once Reducers have been added, they can be futher change by splitting or combining them.
+            </li>
+            <li>
+              Actions in Redux are javascript objects that have a type field. It is basically an event
+              that describes something that has happened in the application. Here is an example list of
+              actions:
+              <pre>
+                {type: 'todos/todoAdded', payload: todoText}
+                {'todos/todoToggled', payload: todoId}
+                {type: 'todos/colorSelected, payload: {todoId, color}}
+                {type: 'todos/todoDeleted', payload: todoId}
+              </pre>
+              For the actions, the payload is the piece of data that comes with each action.
+            </li>
+            <li>
+              In Redux, Reducers are functions that take the current state and actions as arguments,
+              and return the new state results. This looks like:
+              <pre>
+                (state, action) => newState
+              </pre>
+              An example of a fully defined Reducer is:
+              <pre>
+                export default function rootReducer(state = initialState, action) {
+                  switch (action.type) {
+                    case 'todos/todoAdded': {
+                      return {
+                        ...state,
+                        todos: [
+                          ...state.todos,
+                          {
+                            id: nextTodoId(state.todos),
+                            text: action.payload,
+                            completed: false
+                          }
+                        ]
+                      }
+                    }
+                    default:
+                      return state
+                  }
+                }
+              </pre>
+              In this example, the reducer looks at the action type and decides what to do.
+              For the given case, it returns all the existing state data (denoted by ...) as well as 
+              a new array for the todos field. This new array is defined in the Reducer. If the reducer does not
+              match the given action type to any of the cases, it returns the exisiting state unchanged.
+            </li>
+            <li>
+              The Reducer must follow specific rules. These rules are:
+              <ul>
+                <li>
+                  They should only calculate the new state value based on the state and action arguments
+                </li>
+                <li>
+                  They are not allowed to modify the existing state. Instead, they must make immutable updates, 
+                  by copying the existing state and making changes to the copied values.
+                </li>
+                <li>
+                  They must not do any asynchronous logic or other "side effects"
+                </li>
+              </ul>
+              It is important that these rules are followed because it makes code predictable, which is one of
+              goals of Redux. Also, it is important that a function does not depend on any variable defined outside itself.
+              This way, the behavior of the Reducer is never unknown.
+            </li>
+            <li>
+              The last important thing I learned is that Reducers should be split up so that they are easier to read.
+              They can be split up into folders or files based on features and are usually written in "slice" files,
+              which contains all the reducer logic and all of the action-related code for that part of your app state.
+            </li>
+          </ul>
+        </p>
+      </main>
+    </div>
+    <footer>
+        Website Customized, Crafted, and Coded by Jason Vanlandingham
+    </footer>
+  </div>
+</body>
+
+</html>
